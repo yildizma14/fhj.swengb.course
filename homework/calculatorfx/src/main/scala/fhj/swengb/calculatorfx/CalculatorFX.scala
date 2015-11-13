@@ -27,8 +27,8 @@ class CalculatorFX extends javafx.application.Application {
   val FxmlDeKilla = "/fhj/swengb/calculatorfx/calculatorfx_dekilla.fxml"
   val CssDeKilla = "fhj/swengb/calculatorfx/calculatorfx_dekilla.css"
 
-  val DefaultFxml = FxmlAbajric
-  val DefaultCss = CssAbajric
+  val DefaultFxml = FxmlDeKilla
+  val DefaultCss = CssDeKilla
 
   def mkFxmlLoader(fxml: String): FXMLLoader = {
     new FXMLLoader(getClass.getResource(fxml))
@@ -52,7 +52,7 @@ class CalculatorFX extends javafx.application.Application {
     stage.getScene.getStylesheets.add(css)
   }
 
-def abajric(): Unit = start(classOf[CalculatorFX])
+
 }
 
 object CalcFun {
@@ -194,7 +194,6 @@ class CalculatorFXController extends Initializable {
           numbers = mkNumber(reverseDigits) :: numbers
           val a = numbers.tail.head
           numbers = sgn(a) :: numbers.tail.tail
-          println(numbers)
         case ENTER =>
           numbers = mkNumber(reverseDigits) :: numbers
         case PLUS =>
