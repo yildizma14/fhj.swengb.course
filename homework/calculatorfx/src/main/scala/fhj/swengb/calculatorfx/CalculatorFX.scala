@@ -52,6 +52,7 @@ class CalculatorFX extends javafx.application.Application {
     stage.getScene.getStylesheets.add(css)
   }
 
+def abajric(): Unit = start(classOf[CalculatorFX])
 }
 
 object CalcFun {
@@ -201,7 +202,6 @@ class CalculatorFXController extends Initializable {
           val a = numbers.head
           val b = numbers.tail.head
           numbers = plus(a, b) :: numbers.tail.tail
-          println(numbers)
         case MINUS =>
           numbers = mkNumber(reverseDigits) :: numbers
           val a = numbers.head
